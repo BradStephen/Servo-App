@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Servo.MainPage" 
+             BackgroundColor="#252424">
+
+    <StackLayout>
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <StackLayout Grid.Row="0" Grid.Column="0" Spacing="0">
+                <Label Text="FPGA" FontSize="50" TextColor="#6C8DA7" HorizontalTextAlignment="Start" Margin="10,0,10,0"/>
+                <Label Text="Servo Control" FontSize="20" TextColor="#84A484" HorizontalTextAlignment="Start" Margin="10,0,10,0"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="0" Grid.Column="1" Spacing="0">
+                <Frame BackgroundColor="#6C8DA7" BorderColor="#" CornerRadius="10" Margin="10,10,10,0" HorizontalOptions="End" HasShadow="True" >
+                    <Switch x:Name="Lock" HorizontalOptions="Center" Toggled="Lock_Toggled" ThumbColor="#ce8054" OnColor="#84A48A"/>
+                </Frame>
+                <Label TextColor="#C1A598" FontSize="20" Text="Lock Servo" HorizontalOptions="EndAndExpand" Margin="10,0,10,10"/>
+            </StackLayout>
+        </Grid>
+
+        <Frame BackgroundColor="Black" CornerRadius="20" Padding="40,10,40,10" HorizontalOptions="Center">
+            <Label x:Name="myReuslt" Text="0" FontSize="70" TextColor="#C1A598" HorizontalTextAlignment="Center"/>
+        </Frame>
+        <Label Text="Angle of Rotation" TextColor="#C1A598" FontSize="40" HorizontalTextAlignment="Center" Margin="0,0,0,50"/>
+    </StackLayout>
+
+</ContentPage>
+
+
